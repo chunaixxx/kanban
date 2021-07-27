@@ -1,5 +1,8 @@
 # kanban
 
+### Demo
+[click](https://chunaixxx.github.io/kanban/)
+
 ## Project setup
 ```
 npm install
