@@ -5,6 +5,8 @@ export default {
 		plan: [],
 		work: [],
 		ready: [],
+
+		counterTasks: 0,
 	},
 
 	mutations: {
@@ -15,11 +17,13 @@ export default {
 
 		addTask(state, { desc, priority}) {
 			state.plan.push({
-				id: this.getters.countTasks + 1,
+				id: state.counterTasks + 1,
 				desc,
 				priority,
 				date: formateDate(new Date()),
 			})
+
+			this.commit('increaseСounterTasks')
 		},
 		
 		editTask(state, { oldTask, newTask }) {
@@ -45,11 +49,9 @@ export default {
 			this.commit('deleteTask', { task, listName: from})
 			state[to].push(task);				
 		},
-	},
 
-	getters: {
-		countTasks(state) {
-			return state.plan.length + state.work.length + state.ready.length
+		increaseСounterTasks(state) {
+			state.counterTasks += 1;
 		}
 	},
 }
