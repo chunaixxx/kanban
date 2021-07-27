@@ -106,12 +106,13 @@ export default {
 	}
 
 	&__btns {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+		display: flex;
 		gap: 20px;
 	}
 
 	&__btn {
+		width: 100%;
+
 		&--white {
 			background-color: #fff;
 			color: #222;
@@ -124,6 +125,21 @@ export default {
 			color: #222;
 
 			border: 1px solid #111;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.modal {
+		padding: 0 30px;
+
+		&__inner {
+			padding: 30px 30px;
+		}
+
+		&__btns {
+			flex-direction: column-reverse;
+			gap: 10px;
 		}
 	}
 }

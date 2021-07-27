@@ -30,7 +30,7 @@
 				/>
 			</button>
 
-			<button @click="deleteTask" class="task__btn">
+			<button @click.stop="deleteTask" class="task__btn">
 				<img
 					:src="darkTheme ? require('@/assets/icons/deleteDarkTheme.svg') : require('@/assets/icons/delete.svg')"
 					class="task__icon"
@@ -109,10 +109,6 @@ export default {
 	transition: opacity .3s ease;
 	&.animate {
 		opacity: 0;
-	}
-
-	&:not(:last-child) {
-		margin-bottom: 30px;
 	}
 
 	&__header {

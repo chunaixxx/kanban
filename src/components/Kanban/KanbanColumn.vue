@@ -83,6 +83,7 @@ export default {
 	background-color: var(--column-bg);
 	display: flex;
 	flex-direction: column;
+	gap: 20px;
 
 	padding: 25px;
 	height: 100%;
@@ -91,8 +92,13 @@ export default {
 	&__title {
 		font-weight: 700;
 		text-align: center;
-		margin-bottom: 15px;
 		color: var(--primary-color)
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.column {
+		padding: 15px;
 	}
 }
 </style>

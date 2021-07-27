@@ -137,4 +137,10 @@ a {
 	align-items: center;
 	color: var(--primary-color);
 }
+
+@media screen and (max-width: 900px) {
+	.main {
+		padding: 10px;
+	}
+}
 </style>
